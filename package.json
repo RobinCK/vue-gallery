@@ -1,0 +1,36 @@
+{
+  "name": "vue-gallery",
+  "version": "0.0.1",
+  "description": "VueJS responsive and customizable image and video gallery, carousel and lightbox, optimized for both mobile and desktop web browsers.",
+  "main": "dist/js/vue-gallery.js",
+  "jsnext:main": "src/index.js",
+  "unpkg": "dist/js/vue-gallery.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobinCK/vue-gallery.git"
+  },
+  "author": "Igor Ognichenko <ognichenko.igor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobinCK/vue-gallery/issues"
+  },
+  "homepage": "https://github.com/RobinCK/vue-gallery#readme",
+  "keywords": [
+    "vue-gallery",
+    "vuejs-gallery",
+    "vue",
+    "vuejs",
+    "gallery",
+    "images",
+    "pictures",
+    "carousel",
+    "slider",
+    "mobile",
+    "touch",
+    "vue-plugin",
+    "vue-component"
+  ]
+}

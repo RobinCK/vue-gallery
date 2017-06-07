@@ -1,0 +1,8 @@
+.editorconfig
+.gitignore
+.npmignore
+.idea/
+.git/
+_config.yml
+CHANGELOG.md
+.codeclimate.yml
