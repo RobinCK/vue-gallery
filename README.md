@@ -88,7 +88,7 @@ npm run build
   <script type="text/javascript" src="https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-gallery.js"></script>
   <script type="text/javascript" src="https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-gallery-fullscreen.js"></script>
   <script type="text/javascript" src="vue-gallery.js"></script>
-  <link rel="stylesheet" type="text/css" href="vue-gallery.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/blueimp-gallery@2.27.0/css/blueimp-gallery.min.css">
   
 
 <div id="app">

@@ -1,4 +1,3 @@
-import fs from 'fs';
 import vue from 'rollup-plugin-vue';
 import babel from 'rollup-plugin-babel';
 import uglify from 'rollup-plugin-uglify';
@@ -9,11 +8,7 @@ export default {
   moduleName: 'VueGallery',
   format: 'umd',
   plugins: [
-    vue({
-      css (style, styles, compiler) {
-        fs.writeFileSync('dist/css/vue-gallery.css', style)
-      }
-    }),
+    vue(),
     babel({
       babelrc: false,
       runtimeHelpers: true,
