@@ -32,3 +32,97 @@ npm install vue-gallery --save
 ``` bash
 yarn add vue-gallery
 ```
+## Development Setup
+
+``` bash
+# install dependencies
+npm install
+
+# build dist files
+npm run build
+```
+
+## Usage
+
+### VueJS single file (ECMAScript 2015)
+```html
+<template>
+  <div>
+    <gallery :images="images" :index="index" @close="index = null"></photoSwipe>
+    <button type="button" @click="index = 0"></button>
+  </div>
+</template>
+
+<script>
+  import Gallery from 'vue-gallery';
+  
+  export default {
+    data() {
+      return {
+        images: [
+          'https://dummyimage.com/800/ffffff/000000',
+          'https://dummyimage.com/1600/ffffff/000000',
+          'https://dummyimage.com/1280/000000/ffffff',
+          'https://dummyimage.com/400/000000/ffffff',
+        ],
+        index: null, // index image
+      };
+    },
+    
+    components: {
+      Gallery
+    },
+  }
+</script> 
+```
+
+### Browser (ES5)
+```html
+<script type="text/javascript" src="blueimp-gallery.min.js"></script>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript" src="vue-gallery.js"></script>
+
+<div id="app">
+  <gallery :images="images" :index="index" @close="index = null"></photoSwipe>
+  <button type="button" @click="index = 0"></button>
+</div>
+
+<script type="text/javascript">
+  new Vue({
+    el: '#app',
+    data: function() {
+      return {
+        images: [
+          'https://dummyimage.com/800/ffffff/000000',
+          'https://dummyimage.com/1600/ffffff/000000',
+          'https://dummyimage.com/1280/000000/ffffff',
+          'https://dummyimage.com/400/000000/ffffff',
+        ],
+        index: null, // index image
+      };
+    },
+    
+    components: {
+      'gallery': VueGallery
+    },
+  });
+</script>
+```
+
+## Props
+
+| Props               | Type      | Default                                         | Description  |
+| --------------------|:----------| ------------------------------------------------|--------------|
+| images              | Array     | []                                              | Urls list  |
+| index               | Number    | null                                            | Opened image index  |
+| options             | Object    |                                                 | [blueimp-gallery](https://github.com/blueimp/Gallery) options |
+
+
+
+## Events
+| Name         | Params                   | Description  |
+| -------------|:-------------------------|--------------|
+| close        |                          | Close        |
+
+## License
+MIT © [Igor Ognichenko](https://github.com/RobinCK)

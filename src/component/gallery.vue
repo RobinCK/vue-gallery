@@ -30,9 +30,8 @@
         },
       },
 
-      openImage: {
+      index: {
         type: Number,
-        default: null,
       },
     },
 
@@ -43,11 +42,12 @@
     },
 
     watch: {
-      openImage(value) {
+      index(value) {
         if (value !== null) {
           this.open(value);
-        } else if (gallery) {
+        } else {
           this.instance.close();
+          this.$emit('close');
         }
       },
     },
