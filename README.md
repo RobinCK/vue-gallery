@@ -16,6 +16,10 @@
 # vue-gallery
 :camera: VueJS responsive and customizable image and video gallery, carousel and lightbox, optimized for both mobile and desktop web browsers.
 
+## Example
+
+[jsFiddle](https://jsfiddle.net/Robin_ck/LffrLb2k/)
+
 ## Install
 #### CDN
 

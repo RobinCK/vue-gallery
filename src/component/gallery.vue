@@ -46,13 +46,18 @@
         if (value !== null) {
           this.open(value);
         } else {
-          this.close();
+          if (this.instance) {
+            this.instance.close();
+          }
+
+          this.$emit('close');
         }
       },
     },
 
     destoryed() {
-      this.close();
+      this.instance.close();
+      this.instance = null;
     },
 
     methods: {
@@ -69,15 +74,9 @@
           onslide: (index, slide) => this.$emit('onslide', { index, slide }),
           onslideend: (index, slide) => this.$emit('onslideend', { index, slide }),
           onslidecomplete: (index, slide) => this.$emit('onslidecomplete', { index, slide }),
-          onclose: () => this.close(),
+          onclose: () => this.$emit('close'),
           onclosed: () => this.$emit('onclosed'),
         }, this.options));
-      },
-
-      close() {
-        this.instance.close();
-        this.instance = null;
-        this.$emit('close');
       },
     },
   };
