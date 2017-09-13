@@ -48,7 +48,7 @@ npm run build
 ```html
 <template>
   <div>
-    <gallery :images="images" :index="index" @close="index = null"></photoSwipe>
+    <gallery :images="images" :index="index" @close="index = null"></gallery>
     <button type="button" @click="index = 0"></button>
   </div>
 </template>
@@ -83,7 +83,7 @@ npm run build
 <script type="text/javascript" src="vue-gallery.js"></script>
 
 <div id="app">
-  <gallery :images="images" :index="index" @close="index = null"></photoSwipe>
+  <gallery :images="images" :index="index" @close="index = null"></gallery>
   <button type="button" @click="index = 0"></button>
 </div>
 
