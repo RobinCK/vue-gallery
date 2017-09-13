@@ -12,7 +12,7 @@
 <script>
   import 'blueimp-gallery/css/blueimp-gallery.min.css';
   import 'blueimp-gallery/js/blueimp-gallery-fullscreen.js';
-  import gallery from 'blueimp-gallery/js/blueimp-gallery.js';
+  import blueimp from 'blueimp-gallery/js/blueimp-gallery.js';
 
   export default {
     props: {
@@ -46,25 +46,38 @@
         if (value !== null) {
           this.open(value);
         } else {
-          this.instance.close();
-          this.$emit('close');
+          this.close();
         }
       },
     },
 
     destoryed() {
-      this.instance.close();
-      this.instance = null;
+      this.close();
     },
 
     methods: {
       open(index) {
-        this.instance = gallery(this.images, Object.assign({
+        const instance = typeof blueimp.Gallery !== 'undefined' ? blueimp.Gallery : blueimp;
+
+        this.instance = instance(this.images, Object.assign({
           toggleControlsOnReturn: false,
           toggleControlsOnSlideClick: false,
           closeOnSlideClick: false,
           index,
+          onopen: () => this.$emit('onopen'),
+          onopened: () => this.$emit('onopened'),
+          onslide: (index, slide) => this.$emit('onslide', { index, slide }),
+          onslideend: (index, slide) => this.$emit('onslideend', { index, slide }),
+          onslidecomplete: (index, slide) => this.$emit('onslidecomplete', { index, slide }),
+          onclose: () => this.close(),
+          onclosed: () => this.$emit('onclosed'),
         }, this.options));
+      },
+
+      close() {
+        this.instance.close();
+        this.instance = null;
+        this.$emit('close');
       },
     },
   };

@@ -1,0 +1,58 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <script type="text/javascript" src="https://unpkg.com/vue@2.4.3/dist/vue.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-helper.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-gallery.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-gallery-fullscreen.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/blueimp-gallery@2.27.0/css/blueimp-gallery.min.css">
+  <script type="text/javascript" src="../dist/js/vue-gallery.js"></script>
+  <title>Vue Gallery</title>
+</head>
+
+<body>
+
+<style type="text/css">
+  .image {
+    float: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid #ebebeb;
+    margin: 5px;
+  }
+</style>
+
+<div id="app">
+  <gallery :images="images" :index="index" @close="index = null"></gallery>
+  <div
+    class="image"
+    v-for="image, imageIndex in images"
+    @click="index = imageIndex"
+    :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }"
+  ></div>
+</div>
+
+<script type="text/javascript">
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        images: [
+          'https://dummyimage.com/800/ffffff/000000',
+          'https://dummyimage.com/1600/ffffff/000000',
+          'https://dummyimage.com/1280/000000/ffffff',
+          'https://dummyimage.com/400/000000/ffffff'
+        ],
+        index: null
+      };
+    },
+
+    components: {
+      'gallery': VueGallery
+    }
+  });
+</script>
+
+</body>
+</html>

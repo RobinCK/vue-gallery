@@ -1,10 +1,10 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('blueimp-gallery/css/blueimp-gallery.min.css'), require('blueimp-gallery/js/blueimp-gallery-fullscreen.js'), require('blueimp-gallery/js/blueimp-gallery.js')) :
 	typeof define === 'function' && define.amd ? define(['blueimp-gallery/css/blueimp-gallery.min.css', 'blueimp-gallery/js/blueimp-gallery-fullscreen.js', 'blueimp-gallery/js/blueimp-gallery.js'], factory) :
-	(global.VueGallery = factory(null,null,global.gallery));
-}(this, (function (blueimpGallery_min_css,blueimpGalleryFullscreen_js,gallery) { 'use strict';
+	(global.VueGallery = factory(null,null,global.blueimp));
+}(this, (function (blueimpGallery_min_css,blueimpGalleryFullscreen_js,blueimp) { 'use strict';
 
-gallery = gallery && gallery.hasOwnProperty('default') ? gallery['default'] : gallery;
+blueimp = blueimp && blueimp.hasOwnProperty('default') ? blueimp['default'] : blueimp;
 
 var asyncGenerator = function () {
   function AwaitValue(value) {
@@ -167,9 +167,8 @@ var VueGallery$1 = { render: function render() {
       }
     },
 
-    openImage: {
-      type: Number,
-      default: null
+    index: {
+      type: Number
     }
   },
 
@@ -181,29 +180,58 @@ var VueGallery$1 = { render: function render() {
 
 
   watch: {
-    openImage: function openImage(value) {
+    index: function index(value) {
       if (value !== null) {
         this.open(value);
-      } else if (gallery) {
-        this.instance.close();
+      } else {
+        this.close();
       }
     }
   },
 
   destoryed: function destoryed() {
-    this.instance.close();
-    this.instance = null;
+    this.close();
   },
 
 
   methods: {
     open: function open(index) {
-      this.instance = gallery(this.images, _extends({
+      var _this = this;
+
+      var instance = typeof blueimp.Gallery !== 'undefined' ? blueimp.Gallery : blueimp;
+
+      this.instance = instance(this.images, _extends({
         toggleControlsOnReturn: false,
         toggleControlsOnSlideClick: false,
         closeOnSlideClick: false,
-        index: index
+        index: index,
+        onopen: function onopen() {
+          return _this.$emit('onopen');
+        },
+        onopened: function onopened() {
+          return _this.$emit('onopened');
+        },
+        onslide: function onslide(index, slide) {
+          return _this.$emit('onslide', { index: index, slide: slide });
+        },
+        onslideend: function onslideend(index, slide) {
+          return _this.$emit('onslideend', { index: index, slide: slide });
+        },
+        onslidecomplete: function onslidecomplete(index, slide) {
+          return _this.$emit('onslidecomplete', { index: index, slide: slide });
+        },
+        onclose: function onclose() {
+          return _this.close();
+        },
+        onclosed: function onclosed() {
+          return _this.$emit('onclosed');
+        }
       }, this.options));
+    },
+    close: function close() {
+      this.instance.close();
+      this.instance = null;
+      this.$emit('close');
     }
   }
 };

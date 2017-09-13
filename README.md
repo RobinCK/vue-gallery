@@ -48,16 +48,21 @@ npm run build
 ```html
 <template>
   <div>
-    <gallery :images="images" :index="index" @close="index = null"></photoSwipe>
-    <button type="button" @click="index = 0"></button>
+    <gallery :images="images" :index="index" @close="index = null"></gallery>
+    <div
+      class="image"
+      v-for="image, imageIndex in images"
+      @click="index = imageIndex"
+      :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }"
+    ></div>
   </div>
 </template>
 
 <script>
-  import Gallery from 'vue-gallery';
+  import VueGallery from 'vue-gallery';
   
   export default {
-    data() {
+    data: function () {
       return {
         images: [
           'https://dummyimage.com/800/ffffff/000000',
@@ -65,12 +70,12 @@ npm run build
           'https://dummyimage.com/1280/000000/ffffff',
           'https://dummyimage.com/400/000000/ffffff',
         ],
-        index: null, // index image
+        index: null
       };
     },
-    
+
     components: {
-      Gallery
+      'gallery': VueGallery
     },
   }
 </script> 
@@ -78,33 +83,42 @@ npm run build
 
 ### Browser (ES5)
 ```html
-<script type="text/javascript" src="blueimp-gallery.min.js"></script>
-<script type="text/javascript" src="vue.js"></script>
-<script type="text/javascript" src="vue-gallery.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/vue@2.4.3/dist/vue.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-helper.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-gallery.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-gallery-fullscreen.js"></script>
+  <script type="text/javascript" src="vue-gallery.js"></script>
+  <link rel="stylesheet" type="text/css" href="vue-gallery.css">
+  
 
 <div id="app">
-  <gallery :images="images" :index="index" @close="index = null"></photoSwipe>
-  <button type="button" @click="index = 0"></button>
+  <gallery :images="images" :index="index" @close="index = null"></gallery>
+  <div
+    class="image"
+    v-for="image, imageIndex in images"
+    @click="index = imageIndex"
+    :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }"
+  ></div>
 </div>
 
 <script type="text/javascript">
   new Vue({
     el: '#app',
-    data: function() {
+    data: function () {
       return {
         images: [
           'https://dummyimage.com/800/ffffff/000000',
           'https://dummyimage.com/1600/ffffff/000000',
           'https://dummyimage.com/1280/000000/ffffff',
-          'https://dummyimage.com/400/000000/ffffff',
+          'https://dummyimage.com/400/000000/ffffff'
         ],
-        index: null, // index image
+        index: null
       };
     },
-    
+
     components: {
       'gallery': VueGallery
-    },
+    }
   });
 </script>
 ```
@@ -120,9 +134,15 @@ npm run build
 
 
 ## Events
-| Name         | Params                   | Description  |
-| -------------|:-------------------------|--------------|
-| close        |                          | Close        |
+| Name             | Params                  | Description  |
+| -----------------|:------------------------|--------------|
+| onopen           |                         |         |
+| onopened         |                         |         |
+| onslide          |                         |         |
+| onslideend       |                         |         |
+| onslidecomplete  |                         |         |
+| onclose          |                         |         |
+| onclosed         |                         |         |
 
 ## License
 MIT © [Igor Ognichenko](https://github.com/RobinCK)
