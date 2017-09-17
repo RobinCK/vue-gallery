@@ -18,7 +18,8 @@
 
 ## Example
 
-[jsFiddle](https://fiddle.jshell.net/Robin_ck/LffrLb2k/show/light/)
+[jsFiddle - image](https://fiddle.jshell.net/Robin_ck/LffrLb2k/show/light/)
+[jsFiddle - video](https://fiddle.jshell.net/Robin_ck/djqcrm8m/show/light/)
 
 ## Install
 #### CDN
