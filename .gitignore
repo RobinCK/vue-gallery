@@ -2,11 +2,3 @@ Thumbs.db
 .DS_Store
 .idea
 node_modules
-bower_components
-npm-debug.log
-.nyc_output
-coverage
-reports
-selenium-debug.log
-local.log
-sauce_connect.log
