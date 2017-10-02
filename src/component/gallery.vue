@@ -1,11 +1,17 @@
 <template>
-  <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+  <div
+    class="blueimp-gallery blueimp-gallery-controls"
+    :class="{'blueimp-gallery-carousel': carousel}"
+  >
     <div class="slides"></div>
     <h3 class="title"></h3>
     <a class="prev">‹</a>
     <a class="next">›</a>
-    <a class="close">×</a>
-    <ol class="indicator"></ol>
+    <a v-if="!carousel" class="close">×</a>
+    <ol v-if="!carousel" class="indicator"></ol>
+
+    <a v-if="carousel" class="play-pause"></a>
+
   </div>
 </template>
 
@@ -30,6 +36,11 @@
         },
       },
 
+      carousel: {
+        type: Boolean,
+        default: false,
+      },
+
       index: {
         type: Number,
       },
@@ -43,6 +54,10 @@
 
     watch: {
       index(value) {
+        if (this.carousel) {
+          return;
+        }
+
         if (value !== null) {
           this.open(value);
         } else {
@@ -55,19 +70,24 @@
       },
     },
 
+    mounted() {
+      this.open();
+    },
+
     destoryed() {
       this.instance.close();
       this.instance = null;
     },
 
     methods: {
-      open(index) {
+      open(index = 0) {
         const instance = typeof blueimp.Gallery !== 'undefined' ? blueimp.Gallery : blueimp;
 
-        this.instance = instance(this.images, Object.assign({
+        const options = Object.assign({
           toggleControlsOnReturn: false,
           toggleControlsOnSlideClick: false,
           closeOnSlideClick: false,
+          carousel: this.carousel,
           index,
           onopen: () => this.$emit('onopen'),
           onopened: () => this.$emit('onopened'),
@@ -76,7 +96,13 @@
           onslidecomplete: (index, slide) => this.$emit('onslidecomplete', { index, slide }),
           onclose: () => this.$emit('close'),
           onclosed: () => this.$emit('onclosed'),
-        }, this.options));
+        }, this.options);
+
+        if (this.carousel) {
+          options.container = this.$el;
+        }
+
+        this.instance = instance(this.images, options);
       },
     },
   };

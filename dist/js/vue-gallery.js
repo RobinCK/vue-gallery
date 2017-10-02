@@ -148,10 +148,8 @@ var _extends = Object.assign || function (target) {
 };
 
 var VueGallery$1 = { render: function render() {
-    var _vm = this;return _vm._m(0);
-  }, staticRenderFns: [function () {
-    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "blueimp-gallery blueimp-gallery-controls", attrs: { "id": "blueimp-gallery" } }, [_c('div', { staticClass: "slides" }), _c('h3', { staticClass: "title" }), _c('a', { staticClass: "prev" }, [_vm._v("‹")]), _vm._v(" "), _c('a', { staticClass: "next" }, [_vm._v("›")]), _vm._v(" "), _c('a', { staticClass: "close" }, [_vm._v("×")]), _c('ol', { staticClass: "indicator" })]);
-  }],
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "blueimp-gallery blueimp-gallery-controls", class: { 'blueimp-gallery-carousel': _vm.carousel } }, [_c('div', { staticClass: "slides" }), _c('h3', { staticClass: "title" }), _c('a', { staticClass: "prev" }, [_vm._v("‹")]), _vm._v(" "), _c('a', { staticClass: "next" }, [_vm._v("›")]), _vm._v(" "), !_vm.carousel ? _c('a', { staticClass: "close" }, [_vm._v("×")]) : _vm._e(), !_vm.carousel ? _c('ol', { staticClass: "indicator" }) : _vm._e(), _vm.carousel ? _c('a', { staticClass: "play-pause" }) : _vm._e()]);
+  }, staticRenderFns: [],
   props: {
     images: {
       type: Array,
@@ -165,6 +163,11 @@ var VueGallery$1 = { render: function render() {
       default: function _default() {
         return {};
       }
+    },
+
+    carousel: {
+      type: Boolean,
+      default: false
     },
 
     index: {
@@ -181,6 +184,10 @@ var VueGallery$1 = { render: function render() {
 
   watch: {
     index: function index(value) {
+      if (this.carousel) {
+        return;
+      }
+
       if (value !== null) {
         this.open(value);
       } else {
@@ -193,6 +200,9 @@ var VueGallery$1 = { render: function render() {
     }
   },
 
+  mounted: function mounted() {
+    this.open();
+  },
   destoryed: function destoryed() {
     this.instance.close();
     this.instance = null;
@@ -200,15 +210,18 @@ var VueGallery$1 = { render: function render() {
 
 
   methods: {
-    open: function open(index) {
+    open: function open() {
       var _this = this;
+
+      var index = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
 
       var instance = typeof blueimp.Gallery !== 'undefined' ? blueimp.Gallery : blueimp;
 
-      this.instance = instance(this.images, _extends({
+      var options = _extends({
         toggleControlsOnReturn: false,
         toggleControlsOnSlideClick: false,
         closeOnSlideClick: false,
+        carousel: this.carousel,
         index: index,
         onopen: function onopen() {
           return _this.$emit('onopen');
@@ -231,7 +244,13 @@ var VueGallery$1 = { render: function render() {
         onclosed: function onclosed() {
           return _this.$emit('onclosed');
         }
-      }, this.options));
+      }, this.options);
+
+      if (this.carousel) {
+        options.container = this.$el;
+      }
+
+      this.instance = instance(this.images, options);
     }
   }
 };

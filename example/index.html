@@ -24,13 +24,8 @@
 </style>
 
 <div id="app">
-  <gallery :images="images" :index="index" @close="index = null"></gallery>
-  <div
-    class="image"
-    v-for="image, imageIndex in images"
-    @click="index = imageIndex"
-    :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }"
-  ></div>
+  <gallery :images="images" :carousel="true"></gallery>
+
 </div>
 
 <script type="text/javascript">
@@ -39,10 +34,40 @@
     data: function () {
       return {
         images: [
-          'https://dummyimage.com/800/ffffff/000000',
-          'https://dummyimage.com/1600/ffffff/000000',
-          'https://dummyimage.com/1280/000000/ffffff',
-          'https://dummyimage.com/400/000000/ffffff'
+          {
+            title: 'Sintel',
+            href: 'https://archive.org/download/Sintel/' +
+            'sintel-2048-surround.mp4',
+            type: 'video/mp4',
+            poster: 'https://i.imgur.com/MUSw4Zu.jpg'
+          },
+          {
+            title: 'Big Buck Bunny',
+            href: 'https://upload.wikimedia.org/wikipedia/commons/c/c0/' +
+            'Big_Buck_Bunny_4K.webm',
+            type: 'video/webm',
+            poster: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/' +
+            'Big_Buck_Bunny_4K.webm/4000px--Big_Buck_Bunny_4K.webm.jpg'
+          },
+          {
+            title: 'Elephants Dream',
+            href: 'https://upload.wikimedia.org/wikipedia/commons/8/83/' +
+            'Elephants_Dream_%28high_quality%29.ogv',
+            type: 'video/ogg',
+            poster: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/' +
+            'Elephants_Dream_s1_proog.jpg/800px-Elephants_Dream_s1_proog.jpg'
+          },
+          {
+            title: 'LES TWINS - An Industry Ahead',
+            type: 'text/html',
+            youtube: 'zi4CIXpx7Bg'
+          },
+          {
+            title: 'KN1GHT - Last Moon',
+            type: 'text/html',
+            vimeo: '73686146',
+            poster: 'https://secure-a.vimeocdn.com/ts/448/835/448835699_960.jpg'
+          }
         ],
         index: null
       };
