@@ -148,7 +148,7 @@ var _extends = Object.assign || function (target) {
 };
 
 var VueGallery$1 = { render: function render() {
-    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "blueimp-gallery blueimp-gallery-controls", class: { 'blueimp-gallery-carousel': _vm.carousel } }, [_c('div', { staticClass: "slides" }), _c('h3', { staticClass: "title" }), _c('a', { staticClass: "prev" }, [_vm._v("‹")]), _vm._v(" "), _c('a', { staticClass: "next" }, [_vm._v("›")]), _vm._v(" "), !_vm.carousel ? _c('a', { staticClass: "close" }, [_vm._v("×")]) : _vm._e(), !_vm.carousel ? _c('ol', { staticClass: "indicator" }) : _vm._e(), _vm.carousel ? _c('a', { staticClass: "play-pause" }) : _vm._e()]);
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "blueimp-gallery blueimp-gallery-controls", class: { 'blueimp-gallery-carousel': _vm.carousel }, attrs: { "id": _vm.id } }, [_c('div', { staticClass: "slides" }), _c('h3', { staticClass: "title" }), _c('a', { staticClass: "prev" }, [_vm._v("‹")]), _vm._v(" "), _c('a', { staticClass: "next" }, [_vm._v("›")]), _vm._v(" "), !_vm.carousel ? _c('a', { staticClass: "close" }, [_vm._v("×")]) : _vm._e(), !_vm.carousel ? _c('ol', { staticClass: "indicator" }) : _vm._e(), _vm.carousel ? _c('a', { staticClass: "play-pause" }) : _vm._e()]);
   }, staticRenderFns: [],
   props: {
     images: {
@@ -172,6 +172,11 @@ var VueGallery$1 = { render: function render() {
 
     index: {
       type: Number
+    },
+
+    id: {
+      type: String,
+      default: 'blueimp-gallery'
     }
   },
 
@@ -201,7 +206,9 @@ var VueGallery$1 = { render: function render() {
   },
 
   mounted: function mounted() {
-    this.open();
+    if (this.carousel) {
+      this.open();
+    }
   },
   destoryed: function destoryed() {
     this.instance.close();
@@ -222,6 +229,7 @@ var VueGallery$1 = { render: function render() {
         toggleControlsOnSlideClick: false,
         closeOnSlideClick: false,
         carousel: this.carousel,
+        container: '#' + this.id,
         index: index,
         onopen: function onopen() {
           return _this.$emit('onopen');

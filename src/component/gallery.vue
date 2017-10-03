@@ -1,6 +1,7 @@
 <template>
   <div
     class="blueimp-gallery blueimp-gallery-controls"
+    :id="id"
     :class="{'blueimp-gallery-carousel': carousel}"
   >
     <div class="slides"></div>
@@ -11,7 +12,6 @@
     <ol v-if="!carousel" class="indicator"></ol>
 
     <a v-if="carousel" class="play-pause"></a>
-
   </div>
 </template>
 
@@ -44,6 +44,11 @@
       index: {
         type: Number,
       },
+
+      id: {
+        type: String,
+        default: 'blueimp-gallery',
+      },
     },
 
     data() {
@@ -71,7 +76,9 @@
     },
 
     mounted() {
-      this.open();
+      if (this.carousel) {
+        this.open();
+      }
     },
 
     destoryed() {
@@ -88,6 +95,7 @@
           toggleControlsOnSlideClick: false,
           closeOnSlideClick: false,
           carousel: this.carousel,
+          container: `#${this.id}`,
           index,
           onopen: () => this.$emit('onopen'),
           onopened: () => this.$emit('onopened'),
