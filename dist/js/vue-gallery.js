@@ -210,7 +210,7 @@ var VueGallery$1 = { render: function render() {
       this.open();
     }
   },
-  destoryed: function destoryed() {
+  destroyed: function destroyed() {
     this.instance.close();
     this.instance = null;
   },
