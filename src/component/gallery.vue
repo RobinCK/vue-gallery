@@ -81,7 +81,7 @@
       }
     },
 
-    destoryed() {
+    destroyed() {
       this.instance.close();
       this.instance = null;
     },
