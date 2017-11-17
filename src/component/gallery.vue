@@ -82,8 +82,10 @@
     },
 
     destroyed() {
-      this.instance.close();
-      this.instance = null;
+      if (this.instance !== null) {
+        this.instance.close();
+        this.instance = null;
+      }
     },
 
     methods: {

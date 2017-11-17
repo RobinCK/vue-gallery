@@ -211,8 +211,10 @@ var VueGallery$1 = { render: function render() {
     }
   },
   destroyed: function destroyed() {
-    this.instance.close();
-    this.instance = null;
+    if (this.instance !== null) {
+      this.instance.close();
+      this.instance = null;
+    }
   },
 
 
