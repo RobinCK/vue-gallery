@@ -1,6 +1,6 @@
 {
   "name": "vue-gallery",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "VueJS responsive and customizable image and video gallery, carousel and lightbox, optimized for both mobile and desktop web browsers.",
   "main": "dist/js/vue-gallery.js",
   "jsnext:main": "src/index.js",
