@@ -7,8 +7,9 @@ export default {
   plugins: [
     vue(),
     babel({
+      babelrc: true,
       runtimeHelpers: true,
-      externalHelpers: true,
+      externalHelpers: false,
       exclude: 'node_modules/**',
     }),
     (process.env.NODE_ENV === 'production' && uglify())

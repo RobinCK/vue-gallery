@@ -18,5 +18,5 @@
       }
     }]
   ],
-  "plugins": ["transform-object-assign", "external-helpers"]
+  "plugins": ["transform-object-assign"]
 }
