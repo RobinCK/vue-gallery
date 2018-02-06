@@ -667,10 +667,13 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
+<<<<<<< HEAD
 blueimp-gallery@^2.27.0:
   version "2.29.0"
   resolved "https://registry.yarnpkg.com/blueimp-gallery/-/blueimp-gallery-2.29.0.tgz#04164eb34d7a5f502d32c518a096f988a3934e2d"
 
+=======
+>>>>>>> 348c063... prototype description for images
 boom@2.x.x:
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/boom/-/boom-2.10.1.tgz#39c8918ceff5799f83f9492a848f625add0c766f"
@@ -743,9 +746,15 @@ camelcase@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
+<<<<<<< HEAD
 caniuse-lite@^1.0.30000784:
   version "1.0.30000787"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000787.tgz#a76c4fa1d6ac00640447ec83c1e7c6b33dd615c5"
+=======
+caniuse-lite@^1.0.30000792:
+  version "1.0.30000792"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000792.tgz#d0cea981f8118f3961471afbb43c9a1e5bbf0332"
+>>>>>>> 348c063... prototype description for images
 
 caseless@~0.11.0:
   version "0.11.0"
@@ -943,6 +952,15 @@ cryptiles@2.x.x:
   dependencies:
     boom "2.x.x"
 
+<<<<<<< HEAD
+=======
+cryptiles@3.x.x:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/cryptiles/-/cryptiles-3.1.2.tgz#a89fbb220f5ce25ec56e8c4aa8a4fd7b5b0d29fe"
+  dependencies:
+    boom "5.x.x"
+
+>>>>>>> 348c063... prototype description for images
 css-modules-loader-core@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/css-modules-loader-core/-/css-modules-loader-core-1.1.0.tgz#5908668294a1becd261ae0a4ce21b0b551f21d16"
@@ -1032,9 +1050,15 @@ detect-indent@^4.0.0:
   dependencies:
     repeating "^2.0.0"
 
+<<<<<<< HEAD
 doctrine@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-2.0.2.tgz#68f96ce8efc56cc42651f1faadb4f175273b0075"
+=======
+doctrine@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-2.1.0.tgz#5cd01fc101621b42c4cd7f5d1a66243716d3f39d"
+>>>>>>> 348c063... prototype description for images
   dependencies:
     esutils "^2.0.2"
 
@@ -1076,6 +1100,7 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
 
+<<<<<<< HEAD
 electron-releases@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/electron-releases/-/electron-releases-2.1.0.tgz#c5614bf811f176ce3c836e368a0625782341fd4e"
@@ -1085,6 +1110,11 @@ electron-to-chromium@^1.3.30:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.30.tgz#9666f532a64586651fc56a72513692e820d06a80"
   dependencies:
     electron-releases "^2.1.0"
+=======
+electron-to-chromium@^1.3.30:
+  version "1.3.32"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.32.tgz#11d0684c0840e003c4be8928f8ac5f35dbc2b4e6"
+>>>>>>> 348c063... prototype description for images
 
 emojis-list@^2.0.0:
   version "2.1.0"
@@ -1322,6 +1352,17 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
+<<<<<<< HEAD
+=======
+form-data@~2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.3.1.tgz#6fb94fbd71885306d73d15cc497fe4cc4ecd44bf"
+  dependencies:
+    asynckit "^0.4.0"
+    combined-stream "^1.0.5"
+    mime-types "^2.1.12"
+
+>>>>>>> 348c063... prototype description for images
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -1790,8 +1831,13 @@ is-regex@^1.0.3:
     has "^1.0.1"
 
 is-resolvable@^1.0.0:
+<<<<<<< HEAD
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-resolvable/-/is-resolvable-1.0.1.tgz#acca1cd36dbe44b974b924321555a70ba03b1cf4"
+=======
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-resolvable/-/is-resolvable-1.1.0.tgz#fb18f87ce1feb925169c9a407c19318a3206ed88"
+>>>>>>> 348c063... prototype description for images
 
 is-typedarray@~1.0.0:
   version "1.0.0"
@@ -1970,12 +2016,21 @@ lodash.clonedeep@^4.3.2:
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
 
 lodash.mergewith@^4.6.0:
+<<<<<<< HEAD
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.0.tgz#150cf0a16791f5903b8891eab154609274bdea55"
 
 lodash@^4.0.0, lodash@^4.17.4, lodash@^4.3.0, lodash@~4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+=======
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.1.tgz#639057e726c3afbdb3e7d42741caa8d6e4335927"
+
+lodash@^4.0.0, lodash@^4.17.4, lodash@^4.3.0, lodash@~4.17.4:
+  version "4.17.5"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
+>>>>>>> 348c063... prototype description for images
 
 longest@^1.0.1:
   version "1.0.1"
@@ -2397,7 +2452,11 @@ postcss-selector-parser@^2.2.3:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
+<<<<<<< HEAD
 postcss@6.0.1, postcss@^6.0.1:
+=======
+postcss@6.0.1:
+>>>>>>> 348c063... prototype description for images
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.1.tgz#000dbd1f8eef217aa368b9a212c5fc40b2a8f3f2"
   dependencies:
@@ -2414,6 +2473,17 @@ postcss@^5.2.11, postcss@^5.2.8:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
+<<<<<<< HEAD
+=======
+postcss@^6.0.1:
+  version "6.0.17"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.17.tgz#e259a051ca513f81e9afd0c21f7f82eda50c65c5"
+  dependencies:
+    chalk "^2.3.0"
+    source-map "^0.6.1"
+    supports-color "^5.1.0"
+
+>>>>>>> 348c063... prototype description for images
 posthtml-attrs-parser@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posthtml-attrs-parser/-/posthtml-attrs-parser-0.1.1.tgz#cc33e00155fb99ba96f67e25e330461f05742ac8"
@@ -2578,6 +2648,13 @@ qs@~6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
+<<<<<<< HEAD
+=======
+qs@~6.5.1:
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
+
+>>>>>>> 348c063... prototype description for images
 randomatic@^1.1.3:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-1.1.7.tgz#c7abe9cc8b87c0baa876b19fde83fd464797e38c"
@@ -2693,7 +2770,38 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
+<<<<<<< HEAD
 request@2, request@2.81.0:
+=======
+request@2:
+  version "2.83.0"
+  resolved "https://registry.yarnpkg.com/request/-/request-2.83.0.tgz#ca0b65da02ed62935887808e6f510381034e3356"
+  dependencies:
+    aws-sign2 "~0.7.0"
+    aws4 "^1.6.0"
+    caseless "~0.12.0"
+    combined-stream "~1.0.5"
+    extend "~3.0.1"
+    forever-agent "~0.6.1"
+    form-data "~2.3.1"
+    har-validator "~5.0.3"
+    hawk "~6.0.2"
+    http-signature "~1.2.0"
+    is-typedarray "~1.0.0"
+    isstream "~0.1.2"
+    json-stringify-safe "~5.0.1"
+    mime-types "~2.1.17"
+    oauth-sign "~0.8.2"
+    performance-now "^2.1.0"
+    qs "~6.5.1"
+    safe-buffer "^5.1.1"
+    stringstream "~0.0.5"
+    tough-cookie "~2.3.3"
+    tunnel-agent "^0.6.0"
+    uuid "^3.1.0"
+
+request@2.81.0:
+>>>>>>> 348c063... prototype description for images
   version "2.81.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0"
   dependencies:
@@ -2799,6 +2907,17 @@ rollup-plugin-babel@^3.0.2:
   dependencies:
     rollup-pluginutils "^1.5.0"
 
+<<<<<<< HEAD
+=======
+rollup-plugin-node-resolve@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-node-resolve/-/rollup-plugin-node-resolve-3.0.2.tgz#38babc12fd404cc2ba1ff68648fe43fa3ffee6b0"
+  dependencies:
+    builtin-modules "^1.1.0"
+    is-module "^1.0.0"
+    resolve "^1.1.6"
+
+>>>>>>> 348c063... prototype description for images
 rollup-plugin-uglify@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/rollup-plugin-uglify/-/rollup-plugin-uglify-2.0.1.tgz#67b37ad1efdafbd83af4c36b40c189ee4866c969"
@@ -2936,6 +3055,15 @@ sntp@1.x.x:
   dependencies:
     hoek "2.x.x"
 
+<<<<<<< HEAD
+=======
+sntp@2.x.x:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/sntp/-/sntp-2.1.0.tgz#2c6cec14fedc2222739caf9b5c3d85d1cc5a2cc8"
+  dependencies:
+    hoek "4.x.x"
+
+>>>>>>> 348c063... prototype description for images
 source-map-support@^0.4.15:
   version "0.4.18"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.18.tgz#0286a6de8be42641338594e97ccea75f0a2c585f"
@@ -3084,6 +3212,15 @@ supports-color@^4.0.0:
   dependencies:
     has-flag "^2.0.0"
 
+<<<<<<< HEAD
+=======
+supports-color@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.1.0.tgz#058a021d1b619f7ddf3980d712ea3590ce7de3d5"
+  dependencies:
+    has-flag "^2.0.0"
+
+>>>>>>> 348c063... prototype description for images
 table@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/table/-/table-4.0.2.tgz#a33447375391e766ad34d3486e6e2aedc84d2e36"
@@ -3205,9 +3342,15 @@ util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
 
+<<<<<<< HEAD
 uuid@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
+=======
+uuid@^3.0.0, uuid@^3.1.0:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.2.1.tgz#12c528bb9d58d0b9265d9a2f6f0fe8be17ff1f14"
+>>>>>>> 348c063... prototype description for images
 
 validate-npm-package-license@^3.0.1:
   version "3.0.1"

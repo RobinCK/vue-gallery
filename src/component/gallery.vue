@@ -1,16 +1,16 @@
 <template>
   <div
-    class="blueimp-gallery blueimp-gallery-controls"
     :id="id"
-    :class="{'blueimp-gallery-carousel': carousel}"
-  >
+    class="blueimp-gallery blueimp-gallery-controls"
+    :class="{'blueimp-gallery-carousel': carousel}">
+    
     <div class="slides"></div>
     <h3 class="title"></h3>
+    <p class="description"></p>
     <a class="prev">‹</a>
     <a class="next">›</a>
     <a v-if="!carousel" class="close">×</a>
     <ol v-if="!carousel" class="indicator"></ol>
-
     <a v-if="carousel" class="play-pause"></a>
   </div>
 </template>
@@ -101,7 +101,7 @@
           index,
           onopen: () => this.$emit('onopen'),
           onopened: () => this.$emit('onopened'),
-          onslide: (index, slide) => this.$emit('onslide', { index, slide }),
+          onslide: this.onSlideCustom,
           onslideend: (index, slide) => this.$emit('onslideend', { index, slide }),
           onslidecomplete: (index, slide) => this.$emit('onslidecomplete', { index, slide }),
           onclose: () => this.$emit('close'),
@@ -114,6 +114,32 @@
 
         this.instance = instance(this.images, options);
       },
+      onSlideCustom(index, slide) {
+        this.$emit('onslide', { index, slide });
+
+        const image = this.images[index];
+        if (image !== undefined) {
+          const text = image.description;
+          const node = this.instance.container.find('.description');
+          if (text) {
+            node.empty();
+            node[0].appendChild(document.createTextNode(text));
+          }
+        }
+      },
     },
   };
 </script>
+
+<style>
+  .blueimp-gallery > .description {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    color: #fff;
+    display: none;
+  }
+  .blueimp-gallery-controls > .description {
+    display: block;
+  }
+</style>
