@@ -29,7 +29,7 @@
     class="image"
     v-for="image, imageIndex in images"
     @click="index = imageIndex"
-    :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }"
+    :style="{ backgroundImage: 'url(' + image.href + ')', width: '300px', height: '200px' }"
   ></div>
 </div>
 
@@ -39,10 +39,26 @@
     data: function () {
       return {
         images: [
-          'https://dummyimage.com/800/ffffff/000000',
-          'https://dummyimage.com/1600/ffffff/000000',
-          'https://dummyimage.com/1280/000000/ffffff',
-          'https://dummyimage.com/400/000000/ffffff'
+          {
+            title: '400x400',
+            description: '400 x 400 White',
+            href: 'https://dummyimage.com/400/ffffff/000000',
+          },
+          {
+            title: '400x400',
+            description: '400 x 400 White',
+            href: 'https://dummyimage.com/400/ffffff/000000',
+          },
+          {
+            title: '400x400',
+            description: '400 x 400 Black',
+            href: 'https://dummyimage.com/400/000000/ffffff',
+          },
+          {
+            title: '400x400',
+            description: '400 x 400 Black',
+            href: 'https://dummyimage.com/400/000000/ffffff',
+          },
         ],
         index: null
       };

@@ -5,7 +5,7 @@ import uglify from 'rollup-plugin-uglify';
 export default {
   input: 'src/index.js',
   plugins: [
-    vue(),
+    vue({ css: true }),
     babel({
       babelrc: true,
       runtimeHelpers: true,
