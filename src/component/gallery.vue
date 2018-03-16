@@ -3,7 +3,7 @@
     :id="id"
     class="blueimp-gallery blueimp-gallery-controls"
     :class="{'blueimp-gallery-carousel': carousel}">
-    
+
     <div class="slides"></div>
     <h3 class="title"></h3>
     <p class="description"></p>
@@ -18,6 +18,8 @@
 <script>
   import 'blueimp-gallery/css/blueimp-gallery.min.css';
   import 'blueimp-gallery/js/blueimp-gallery-fullscreen.js';
+  import 'blueimp-gallery/js/blueimp-gallery-video.js';
+  import 'blueimp-gallery/js/blueimp-gallery-youtube.js';
   import blueimp from 'blueimp-gallery/js/blueimp-gallery.js';
 
   export default {
