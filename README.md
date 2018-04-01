@@ -18,6 +18,8 @@
 </p>
 
 # vue-gallery
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/RobinCK/vue-gallery.svg)](https://greenkeeper.io/)
 :camera: VueJS responsive and customizable image and video gallery, carousel and lightbox, optimized for both mobile and desktop web browsers.
 
 ## Example
