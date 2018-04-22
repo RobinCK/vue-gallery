@@ -52,7 +52,7 @@
     "eslint": "^4.6.1",
     "rollup": "^0.58.1",
     "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-uglify": "^2.0.1",
+    "rollup-plugin-uglify": "^3.0.0",
     "rollup-plugin-vue": "^3.0.0",
     "vue-template-compiler": "^2.5.4"
   },
