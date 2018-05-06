@@ -50,10 +50,10 @@
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "eslint": "^4.6.1",
-    "rollup": "^0.53.3",
+    "rollup": "^0.58.2",
     "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-uglify": "^2.0.1",
     "rollup-plugin-vue": "^4.0.2",
+    "rollup-plugin-uglify": "^3.0.0",
     "vue-template-compiler": "^2.5.4"
   },
   "browserslist": [
