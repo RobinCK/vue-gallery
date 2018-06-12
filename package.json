@@ -39,7 +39,7 @@
     "vue-component"
   ],
   "dependencies": {
-    "blueimp-gallery": "^2.27.0"
+    "blueimp-gallery": "^2.33.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -50,10 +50,10 @@
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "eslint": "^4.6.1",
-    "rollup": "^0.59.0",
+    "rollup": "^0.60.2",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-uglify": "^4.0.0",
-    "rollup-plugin-vue": "4.1.4",
+    "rollup-plugin-vue": "4.2.0",
     "vue-template-compiler": "^2.5.4"
   },
   "browserslist": [
