@@ -9,7 +9,7 @@
     <p class="description"></p>
     <a class="prev">‹</a>
     <a class="next">›</a>
-    <a v-if="!carousel" class="close">×</a>
+    <a v-if="!carousel" class="close">X</a>
     <ol v-if="!carousel" class="indicator"></ol>
     <a v-if="carousel" class="play-pause"></a>
   </div>
