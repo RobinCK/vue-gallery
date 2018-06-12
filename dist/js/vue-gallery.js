@@ -146,7 +146,7 @@
       staticClass: "blueimp-gallery blueimp-gallery-controls",
       class: { "blueimp-gallery-carousel": _vm.carousel },
       attrs: { id: _vm.id }
-    }, [_c("div", { staticClass: "slides" }), _vm._v(" "), _c("h3", { staticClass: "title" }), _vm._v(" "), _c("p", { staticClass: "description" }), _vm._v(" "), _c("a", { staticClass: "prev" }, [_vm._v("‹")]), _vm._v(" "), _c("a", { staticClass: "next" }, [_vm._v("›")]), _vm._v(" "), !_vm.carousel ? _c("a", { staticClass: "close" }, [_vm._v("×")]) : _vm._e(), _vm._v(" "), !_vm.carousel ? _c("ol", { staticClass: "indicator" }) : _vm._e(), _vm._v(" "), _vm.carousel ? _c("a", { staticClass: "play-pause" }) : _vm._e()]);
+    }, [_c("div", { staticClass: "slides" }), _vm._v(" "), _c("h3", { staticClass: "title" }), _vm._v(" "), _c("p", { staticClass: "description" }), _vm._v(" "), _c("a", { staticClass: "prev" }, [_vm._v("‹")]), _vm._v(" "), _c("a", { staticClass: "next" }, [_vm._v("›")]), _vm._v(" "), !_vm.carousel ? _c("a", { staticClass: "close" }, [_vm._v("X")]) : _vm._e(), _vm._v(" "), !_vm.carousel ? _c("ol", { staticClass: "indicator" }) : _vm._e(), _vm._v(" "), _vm.carousel ? _c("a", { staticClass: "play-pause" }) : _vm._e()]);
   };
   var __vue_staticRenderFns__ = [];
   __vue_render__._withStripped = true;
@@ -155,7 +155,7 @@
   /* style */
   var __vue_inject_styles__ = function (inject) {
     if (!inject) return;
-    inject("data-v-5a8b00e0_0", { source: "\n.blueimp-gallery > .description {\n  position: absolute;\n  top: 30px;\n  left: 15px;\n  color: #fff;\n  display: none;\n}\n.blueimp-gallery-controls > .description {\n  display: block;\n}\n", map: undefined, media: undefined });
+    inject("data-v-e8a6f70e_0", { source: "\n.blueimp-gallery > .description {\n  position: absolute;\n  top: 30px;\n  left: 15px;\n  color: #fff;\n  display: none;\n}\n.blueimp-gallery-controls > .description {\n  display: block;\n}\n", map: undefined, media: undefined });
   };
   /* scoped */
   var __vue_scope_id__ = undefined;
@@ -165,10 +165,10 @@
   var __vue_is_functional_template__ = false;
   /* component normalizer */
   function __vue_normalize__(template, style, script$$1, scope, functional, moduleIdentifier, createInjector, createInjectorSSR) {
-    var component = script$$1 || {};
+    var component = (typeof script$$1 === 'function' ? script$$1.options : script$$1) || {};
 
     {
-      component.__file = "/Users/igor/projects/vue-gallery/src/component/gallery.vue";
+      component.__file = "/Users/user/projects/vue-gallery/src/component/gallery.vue";
     }
 
     if (!component.render) {
@@ -210,7 +210,7 @@
   /* style inject */
   function __vue_create_injector__() {
     var head = document.head || document.getElementsByTagName('head')[0];
-    var styles = {};
+    var styles = __vue_create_injector__.styles || (__vue_create_injector__.styles = {});
     var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
 
     return function addStyle(id, css) {
