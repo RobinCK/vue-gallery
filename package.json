@@ -53,7 +53,7 @@
     "rollup": "^0.60.2",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-uglify": "^4.0.0",
-    "rollup-plugin-vue": "4.2.0",
+    "rollup-plugin-vue": "4.3.0",
     "vue-template-compiler": "^2.5.4"
   },
   "browserslist": [
