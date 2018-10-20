@@ -91,6 +91,18 @@ npm run build
     },
   }
 </script> 
+
+<style scoped>
+  .image {
+    float: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid #ebebeb;
+    margin: 5px;
+  }
+</style>
+
 ```
 
 ### Browser (ES5)
