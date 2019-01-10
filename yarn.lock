@@ -62,7 +62,7 @@
     source-map "^0.5.6"
     vue-template-es2015-compiler "^1.6.0"
 
-"@vue/component-compiler@^3.4.4":
+"@vue/component-compiler@^3.6":
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/@vue/component-compiler/-/component-compiler-3.6.0.tgz#8db313e50eaa2903cef5aac68c37a09364dba79d"
   integrity sha512-NIA0vmOI4zbtJAn69iZls8IJ8VxmguswAuiUdu8TcR+YYTYzntfw290HUCSFjzAdRg+FUWZv8r+wc3TzJ/IjwA==
@@ -1777,18 +1777,19 @@ rollup-plugin-uglify@^6.0.0:
     serialize-javascript "^1.5.0"
     uglify-js "^3.4.9"
 
-rollup-plugin-vue@4.3.2:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-vue/-/rollup-plugin-vue-4.3.2.tgz#0bdf0cf677565b0ac2358d590f177b6b4ded8cce"
-  integrity sha512-XPd7bE8O8W1c2fkRwUmlKioXEjE3Zvn/ksbwPkPsyoT+Wik0XVtzyDjoHg/qYcqNm+gzc8idBo3/fgNkTCiSTA==
+rollup-plugin-vue@4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-vue/-/rollup-plugin-vue-4.4.0.tgz#c29d7a9456799e0ce20bffc54be48a653d3f70f4"
+  integrity sha512-A7Gv8HRQLv8UHR8M2eSroiR65k9ziX2VRla+VpyGIXGmpVYwM0nmnZoxz/zSL+T2mhOuyM6kBh1c/+o8CN1qvw==
   dependencies:
     "@babel/runtime" "^7.0.0-beta.46"
-    "@vue/component-compiler" "^3.4.4"
+    "@vue/component-compiler" "^3.6"
     "@vue/component-compiler-utils" "^2.1.0"
     debug "^2.6.0"
     hash-sum "^1.0.2"
     querystring "^0.2.0"
     rollup-pluginutils "^2.0.1"
+    vue-runtime-helpers "^0.2.0"
 
 rollup-pluginutils@^2.0.1:
   version "2.0.1"
@@ -2010,6 +2011,11 @@ util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
+
+vue-runtime-helpers@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/vue-runtime-helpers/-/vue-runtime-helpers-0.2.0.tgz#8f8aa9e5ed40be2f3716c3ef8ee5e319290bedde"
+  integrity sha512-ZMFavDEqYrWxsWq5kLpvv5rjJbLf47V99t8p0G/ZEltx6PVSCXVvUC1yAOBiwLY3IEkUFRM8WUDlMasbsRhurA==
 
 vue-template-compiler@^2.5.4:
   version "2.5.16"
