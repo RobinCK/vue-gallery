@@ -55,6 +55,8 @@
     "rollup-plugin-uglify": "^6.0.0",
     "rollup-plugin-vue": "4.3.2",
     "vue-template-compiler": "^2.5.22"
+    "rollup-plugin-vue": "4.4.0",
+    "vue-template-compiler": "^2.5.22"
   },
   "browserslist": [
     "> 1%",
