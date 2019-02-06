@@ -85,6 +85,7 @@
 
     destroyed() {
       if (this.instance !== null) {
+        this.instance.destroyEventListeners();
         this.instance.close();
         this.instance = null;
       }
