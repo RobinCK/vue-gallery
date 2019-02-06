@@ -7,9 +7,15 @@
     <div class="slides"></div>
     <h3 class="title"></h3>
     <p class="description"></p>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a v-if="!carousel" class="close">X</a>
+    <a class="prev">
+      <slot name="prev">‹</slot>
+    </a>
+    <a class="next">
+      <slot name="next">›</slot>
+    </a>
+    <a v-if="!carousel" class="close">
+      <slot name="close">X</slot>
+    </a>
     <ol v-if="!carousel" class="indicator"></ol>
     <a v-if="carousel" class="play-pause"></a>
   </div>

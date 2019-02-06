@@ -1,6 +1,6 @@
 {
   "name": "vue-gallery",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "VueJS responsive and customizable image and video gallery, carousel and lightbox, optimized for both mobile and desktop web browsers.",
   "main": "dist/js/vue-gallery.js",
   "jsnext:main": "src/index.js",
@@ -49,12 +49,12 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
-    "rollup": "^0.65.0",
     "eslint": "^5.0.0",
-    "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-uglify": "^4.0.0",
-    "rollup-plugin-vue": "4.3.0",
-    "vue-template-compiler": "^2.5.4"
+    "rollup": "^1.0.0",
+    "rollup-plugin-babel": "3.0.7",
+    "rollup-plugin-uglify": "^6.0.1",
+    "rollup-plugin-vue": "4.4.0",
+    "vue-template-compiler": "^2.5.22"
   },
   "browserslist": [
     "> 1%",
