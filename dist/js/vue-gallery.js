@@ -71,6 +71,7 @@
     },
     destroyed: function destroyed() {
       if (this.instance !== null) {
+        this.instance.destroyEventListeners();
         this.instance.close();
         this.instance = null;
       }
@@ -135,6 +136,7 @@
     }
   };
 
+  /* script */
   var __vue_script__ = script;
 
   /* template */
@@ -151,11 +153,10 @@
   var __vue_staticRenderFns__ = [];
   __vue_render__._withStripped = true;
 
-  var __vue_template__ = typeof __vue_render__ !== 'undefined' ? { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ } : {};
   /* style */
-  var __vue_inject_styles__ = function (inject) {
+  var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
     if (!inject) return;
-    inject("data-v-e8a6f70e_0", { source: "\n.blueimp-gallery > .description {\n  position: absolute;\n  top: 30px;\n  left: 15px;\n  color: #fff;\n  display: none;\n}\n.blueimp-gallery-controls > .description {\n  display: block;\n}\n", map: undefined, media: undefined });
+    inject("data-v-e1278594_0", { source: "\n.blueimp-gallery > .description {\n  position: absolute;\n  top: 30px;\n  left: 15px;\n  color: #fff;\n  display: none;\n}\n.blueimp-gallery-controls > .description {\n  display: block;\n}\n", map: { "version": 3, "sources": ["/home/laravel/package/vue-gallery/src/component/gallery.vue"], "names": [], "mappings": ";AAyIA;EACA,kBAAA;EACA,SAAA;EACA,UAAA;EACA,WAAA;EACA,aAAA;AACA;AACA;EACA,cAAA;AACA", "file": "gallery.vue", "sourcesContent": ["<template>\n  <div\n    :id=\"id\"\n    class=\"blueimp-gallery blueimp-gallery-controls\"\n    :class=\"{'blueimp-gallery-carousel': carousel}\">\n\n    <div class=\"slides\"></div>\n    <h3 class=\"title\"></h3>\n    <p class=\"description\"></p>\n    <a class=\"prev\">‹</a>\n    <a class=\"next\">›</a>\n    <a v-if=\"!carousel\" class=\"close\">X</a>\n    <ol v-if=\"!carousel\" class=\"indicator\"></ol>\n    <a v-if=\"carousel\" class=\"play-pause\"></a>\n  </div>\n</template>\n\n<script>\n  import 'blueimp-gallery/css/blueimp-gallery.min.css';\n  import 'blueimp-gallery/js/blueimp-gallery-fullscreen.js';\n  import 'blueimp-gallery/js/blueimp-gallery-video.js';\n  import 'blueimp-gallery/js/blueimp-gallery-youtube.js';\n  import blueimp from 'blueimp-gallery/js/blueimp-gallery.js';\n\n  export default {\n    props: {\n      images: {\n        type: Array,\n        default() {\n          return [];\n        },\n      },\n\n      options: {\n        type: Object,\n        default() {\n          return {};\n        },\n      },\n\n      carousel: {\n        type: Boolean,\n        default: false,\n      },\n\n      index: {\n        type: Number,\n      },\n\n      id: {\n        type: String,\n        default: 'blueimp-gallery',\n      },\n    },\n\n    data() {\n      return {\n        instance: null,\n      };\n    },\n\n    watch: {\n      index(value) {\n        if (this.carousel) {\n          return;\n        }\n\n        if (value !== null) {\n          this.open(value);\n        } else {\n          if (this.instance) {\n            this.instance.close();\n          }\n\n          this.$emit('close');\n        }\n      },\n    },\n\n    mounted() {\n      if (this.carousel) {\n        this.open();\n      }\n    },\n\n    destroyed() {\n      if (this.instance !== null) {\n        this.instance.destroyEventListeners();\n        this.instance.close();\n        this.instance = null;\n      }\n    },\n\n    methods: {\n      open(index = 0) {\n        const instance = typeof blueimp.Gallery !== 'undefined' ? blueimp.Gallery : blueimp;\n\n        const options = Object.assign({\n          toggleControlsOnReturn: false,\n          toggleControlsOnSlideClick: false,\n          closeOnSlideClick: false,\n          carousel: this.carousel,\n          container: `#${this.id}`,\n          index,\n          onopen: () => this.$emit('onopen'),\n          onopened: () => this.$emit('onopened'),\n          onslide: this.onSlideCustom,\n          onslideend: (index, slide) => this.$emit('onslideend', { index, slide }),\n          onslidecomplete: (index, slide) => this.$emit('onslidecomplete', { index, slide }),\n          onclose: () => this.$emit('close'),\n          onclosed: () => this.$emit('onclosed'),\n        }, this.options);\n\n        if (this.carousel) {\n          options.container = this.$el;\n        }\n\n        this.instance = instance(this.images, options);\n      },\n      onSlideCustom(index, slide) {\n        this.$emit('onslide', { index, slide });\n\n        const image = this.images[index];\n        if (image !== undefined) {\n          const text = image.description;\n          const node = this.instance.container.find('.description');\n          if (text) {\n            node.empty();\n            node[0].appendChild(document.createTextNode(text));\n          }\n        }\n      },\n    },\n  };\n</script>\n\n<style>\n  .blueimp-gallery > .description {\n    position: absolute;\n    top: 30px;\n    left: 15px;\n    color: #fff;\n    display: none;\n  }\n  .blueimp-gallery-controls > .description {\n    display: block;\n  }\n</style>\n"] }, media: undefined });
   };
   /* scoped */
   var __vue_scope_id__ = undefined;
@@ -167,9 +168,8 @@
   function __vue_normalize__(template, style, script$$1, scope, functional, moduleIdentifier, createInjector, createInjectorSSR) {
     var component = (typeof script$$1 === 'function' ? script$$1.options : script$$1) || {};
 
-    {
-      component.__file = "/Users/user/projects/vue-gallery/src/component/gallery.vue";
-    }
+    // For security concerns, we use only base name in production mode.
+    component.__file = "/home/laravel/package/vue-gallery/src/component/gallery.vue";
 
     if (!component.render) {
       component.render = template.render;
@@ -261,7 +261,7 @@
   }
   /* style inject SSR */
 
-  var VueGallery = __vue_normalize__(__vue_template__, __vue_inject_styles__, typeof __vue_script__ === 'undefined' ? {} : __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, typeof __vue_create_injector__ !== 'undefined' ? __vue_create_injector__ : function () {}, typeof __vue_create_injector_ssr__ !== 'undefined' ? __vue_create_injector_ssr__ : function () {});
+  var VueGallery = __vue_normalize__({ render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, __vue_create_injector__, undefined);
 
   return VueGallery;
 
