@@ -50,6 +50,6 @@
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-terser": "^4.0.4",
     "rollup-plugin-vue": "4.7.1",
-    "vue-template-compiler": "^2.6.2"
+    "vue-template-compiler": "^2.6.4"
   }
 }

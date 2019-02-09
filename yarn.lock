@@ -2225,9 +2225,9 @@ vue-runtime-helpers@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/vue-runtime-helpers/-/vue-runtime-helpers-1.0.0.tgz#af5fe1c8d727beb680b2eb9d791c8e022342e54d"
 
-vue-template-compiler@^2.6.2:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.2.tgz#6230abf7ca92d565b7471c0cc3f54d5b12aa48e7"
+vue-template-compiler@^2.6.4:
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.4.tgz#0feacfe35e3386033bf4fe31ab4ff1dc1a0c5dec"
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"
