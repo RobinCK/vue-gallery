@@ -11,7 +11,8 @@
     "build": "NODE_ENV=production node_modules/.bin/rollup -c ./build/rollup.config.js && NODE_ENV=production BUILD_MODE=minify node_modules/.bin/rollup -c ./build/rollup.config.js",
     "patch": "npm version patch",
     "minor": "npm version minor",
-    "major": "npm version major"
+    "major": "npm version major",
+    "postinstall": "opencollective-postinstall || true"
   },
   "repository": {
     "type": "git",
@@ -39,7 +40,8 @@
     "vue-component"
   ],
   "dependencies": {
-    "blueimp-gallery": "^2.33.0"
+    "blueimp-gallery": "^2.33.0",
+    "opencollective-postinstall": "^2.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -51,5 +53,9 @@
     "rollup-plugin-terser": "^4.0.4",
     "rollup-plugin-vue": "4.7.1",
     "vue-template-compiler": "^2.6.4"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/vue-gallery"
   }
 }
