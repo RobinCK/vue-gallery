@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://travis-ci.org/RobinCK/vue-gallery"><a href="https://opencollective.com/vue-gallery" alt="Financial Contributors on Open Collective"><img src="https://opencollective.com/vue-gallery/all/badge.svg?label=financial+contributors" /></a> <img src="https://img.shields.io/travis/RobinCK/vue-gallery.svg?style=flat-square"></a>
+  <a href="https://opencollective.com/vue-gallery" alt="Financial Contributors on Open Collective"><img src="https://opencollective.com/vue-gallery/all/badge.svg?label=financial+contributors" /></a>
   <a href="https://github.com/RobinCK/vue-gallery"><img src="https://img.shields.io/badge/vuejs-2.x-brightgreen.svg?style=flat-square"></a>
   <a href="https://www.npmjs.com/package/vue-gallery"><img src="https://img.shields.io/npm/dt/vue-gallery.svg?style=flat-square"></a>
 </p>  
