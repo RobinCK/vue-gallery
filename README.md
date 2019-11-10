@@ -32,25 +32,26 @@
 
 Recommended: https://unpkg.com/vue-gallery, which will reflect the latest version as soon as it is published to npm. You can also browse the source of the npm package at https://unpkg.com/vue-gallery/
 
-#### NPM
+#### npm
 
 ``` bash
-npm install vue-gallery --save
+npm install vue-gallery
+
 ```
 
-#### Yarn
+### Nuxt
 
-``` bash
-yarn add vue-gallery
+1. Add a new file named `vue-gallery.client.js` to your nuxt plugins folder. It is important that your filename ends in `.client.js` ([more info on this convention](https://nuxtjs.org/guide/plugins/#name-conventional-plugin)).
+1. Copy paste the following content in it:
+```js
+import Vue from 'vue'
+import VueGallery from 'vue-gallery'
+
+Vue.component('gallery', VueGallery)
 ```
-## Development Setup
-
-``` bash
-# install dependencies
-npm install
-
-# build dist files
-npm run build
+1. Add it to your list of plugins in `nuxt.config.js`
+```js
+plugins: ['~plugins/vue-gallery.client.js']
 ```
 
 ## Usage
