@@ -42,16 +42,22 @@ npm install vue-gallery
 ### Nuxt
 
 1. Add a new file named `vue-gallery.client.js` to your nuxt plugins folder. It is important that your filename ends in `.client.js` ([more info on this convention](https://nuxtjs.org/guide/plugins/#name-conventional-plugin)).
-1. Copy paste the following content in it:
+2. Copy paste the following content in it:
 ```js
 import Vue from 'vue'
 import VueGallery from 'vue-gallery'
 
-Vue.component('gallery', VueGallery)
+Vue.component('VGallery', VueGallery)
 ```
-1. Add it to your list of plugins in `nuxt.config.js`
+3. Add it to your list of plugins in `nuxt.config.js`:
 ```js
 plugins: ['~plugins/vue-gallery.client.js']
+```
+4. You can now use the component globally:
+```js
+<v-gallery :images="images"
+           :index="index"
+           @close="index = null" />
 ```
 
 ## Usage
