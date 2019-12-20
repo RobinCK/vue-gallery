@@ -39,6 +39,13 @@ npm install vue-gallery
 
 ```
 
+#### Yarn
+
+``` bash
+yarn add vue-gallery
+
+```
+
 ### Nuxt
 
 1. Add a new file named `vue-gallery.client.js` to your nuxt plugins folder. It is important that your filename ends in `.client.js` ([more info on this convention](https://nuxtjs.org/guide/plugins/#name-conventional-plugin)).
@@ -182,6 +189,17 @@ plugins: ['~plugins/vue-gallery.client.js']
 |---------|--------|-------------|
 | [vue-ls](https://github.com/RobinCK/vue-ls)    | ![npm](https://img.shields.io/npm/v/vue-ls.svg)  | Vue plugin for work with local storage, session storage and memory storage from Vue context |
 | [vue-popper](https://github.com/RobinCK/vue-popper)      | ![npm](https://img.shields.io/npm/v/vue-popperjs.svg) | VueJS popover component based on <a href="https://popper.js.org/">popper.js</a> |
+
+
+## Development Setup
+
+``` bash
+# install dependencies
+npm install
+
+# build dist files
+npm run build
+```
 
 ## Contributors
 
