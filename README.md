@@ -48,7 +48,7 @@ yarn add vue-gallery
 
 ### Nuxt
 
-1. Add a new file named `vue-gallery.client.js` to your nuxt plugins folder. It is important that your filename ends in `.client.js` ([more info on this convention](https://nuxtjs.org/guide/plugins/#name-conventional-plugin)).
+1. Add a new file named `vue-gallery.client.js` to your nuxt plugins folder. It is important that your filename ends in `.client.js` ([more info on this convention](https://nuxtjs.org/guide/plugins/#name-conventional-plugin), only works from Nuxt v.2.4.0).
 2. Copy paste the following content in it:
 ```js
 import Vue from 'vue'
