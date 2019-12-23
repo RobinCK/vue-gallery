@@ -32,25 +32,39 @@
 
 Recommended: https://unpkg.com/vue-gallery, which will reflect the latest version as soon as it is published to npm. You can also browse the source of the npm package at https://unpkg.com/vue-gallery/
 
-#### NPM
+#### npm
 
 ``` bash
-npm install vue-gallery --save
+npm install vue-gallery
+
 ```
 
 #### Yarn
 
 ``` bash
 yarn add vue-gallery
+
 ```
-## Development Setup
 
-``` bash
-# install dependencies
-npm install
+### Nuxt
 
-# build dist files
-npm run build
+1. Add a new file named `vue-gallery.client.js` to your nuxt plugins folder. It is important that your filename ends in `.client.js` ([more info on this convention](https://nuxtjs.org/guide/plugins/#name-conventional-plugin), only works from Nuxt v.2.4.0).
+2. Copy paste the following content in it:
+```js
+import Vue from 'vue'
+import VueGallery from 'vue-gallery'
+
+Vue.component('VGallery', VueGallery)
+```
+3. Add it to your list of plugins in `nuxt.config.js`:
+```js
+plugins: ['~plugins/vue-gallery.client.js']
+```
+4. You can now use the component globally:
+```js
+<v-gallery :images="images"
+           :index="index"
+           @close="index = null" />
 ```
 
 ## Usage
@@ -175,6 +189,17 @@ npm run build
 |---------|--------|-------------|
 | [vue-ls](https://github.com/RobinCK/vue-ls)    | ![npm](https://img.shields.io/npm/v/vue-ls.svg)  | Vue plugin for work with local storage, session storage and memory storage from Vue context |
 | [vue-popper](https://github.com/RobinCK/vue-popper)      | ![npm](https://img.shields.io/npm/v/vue-popperjs.svg) | VueJS popover component based on <a href="https://popper.js.org/">popper.js</a> |
+
+
+## Development Setup
+
+``` bash
+# install dependencies
+npm install
+
+# build dist files
+npm run build
+```
 
 ## Contributors
 
