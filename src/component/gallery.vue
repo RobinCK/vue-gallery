@@ -128,11 +128,17 @@
 
         const image = this.images[index];
         if (image !== undefined) {
-          const text = image.description;
+          const description = image.description;
           const node = this.instance.container.find('.description');
-          if (text) {
+          if (description) {
             node.empty();
-            node[0].appendChild(document.createTextNode(text));
+            if (this.options.descriptionType === 'html') {
+              let div = document.createElement('div');
+              div.innerHTML = description;
+              node[0].appendChild(div);
+            } else {
+              node[0].appendChild(document.createTextNode(description));
+            }
           }
         }
       },
