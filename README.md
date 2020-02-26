@@ -183,6 +183,49 @@ plugins: ['~plugins/vue-gallery.client.js']
 | onclosed         |                         |         |
 
 
+## Known Issues
+
+### 1. Multiple VueGallery components in same page breaks functionalities
+
+**Fix:** Give each gallery a unique id. [jsFiddle Example](https://jsfiddle.net/sam_saama/nzjp13ec/)
+
+### 2. Images not oriented correctly.
+
+It's because the image isn't in the "correct" orientation and the exif orientation data is what "fixes" the orientation when you view the images. Browsers don't fix the image orientation based on the exif data. Some browsers show it "correctly" when you open the image in a new tab by itself but don't fix it if you use the image link in a src attribute. [Relevant stackoverflow](https://stackoverflow.com/questions/24658365/img-tag-displays-wrong-orientation).
+
+**Fix:** Use the `onslide` callback to read the exif data and "correct" the orientation based of the exif orientation. [More info on blueimp-gallery](https://github.com/blueimp/Gallery#event-callbacks).
+
+[jsFiddle Example](https://jsfiddle.net/sam_saama/72k0xr3n/)
+
+Code excerpt:
+
+```html
+<gallery :options="options" :images="images" :index="index" @close="index = null"/>
+```
+
+```js
+data() {
+  //...
+  options: {
+    onslide: function(index, slide) {
+      const rotation = {
+        1: 'rotate(0deg)',
+        3: 'rotate(180deg)',
+        6: 'rotate(90deg)',
+        8: 'rotate(270deg)'
+      }
+
+    //Conditionally change rotation of image based on the image orientation data. Example jsfiddle --> https://jsfiddle.net/orotemo/obvna6qn/ Or use something like https://github.com/mattiasw/ExifReader
+    //But for this example, the fix has been hardcoded. 
+      slide.getElementsByTagName(
+        'img'
+      )[0].style = `transform: ${rotation['3']};`
+    }
+  }
+}
+
+```
+
 ## Other my Vue JS plugins
 
 | Project | Status | Description |
