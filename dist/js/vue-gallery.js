@@ -4,8 +4,6 @@
   (global = global || self, global.VueGallery = factory(null, null, null, null, global.blueimp));
 }(this, function (blueimpGallery_min_css, blueimpGalleryFullscreen_js, blueimpGalleryVideo_js, blueimpGalleryYoutube_js, blueimp) { 'use strict';
 
-  blueimp = blueimp && blueimp.hasOwnProperty('default') ? blueimp['default'] : blueimp;
-
   //
   var script = {
     props: {
@@ -280,7 +278,7 @@
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-6d2033ba_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
+      inject("data-v-6d767caf_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
 
     };
     /* scoped */

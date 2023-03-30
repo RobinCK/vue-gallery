@@ -26,7 +26,7 @@
   import 'blueimp-gallery/js/blueimp-gallery-fullscreen.js';
   import 'blueimp-gallery/js/blueimp-gallery-video.js';
   import 'blueimp-gallery/js/blueimp-gallery-youtube.js';
-  import blueimp from 'blueimp-gallery/js/blueimp-gallery.js';
+  import * as blueimp from 'blueimp-gallery/js/blueimp-gallery.js';
 
   export default {
     props: {
