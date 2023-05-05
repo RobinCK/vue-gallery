@@ -70,7 +70,7 @@
         var _this = this;
 
         var index = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-        var instance = typeof blueimp.Gallery !== 'undefined' ? blueimp.Gallery : blueimp;
+        var instance = typeof window.blueimp.Gallery !== 'undefined' ? window.blueimp.Gallery : blueimp;
         var options = Object.assign({
           toggleControlsOnReturn: false,
           toggleControlsOnSlideClick: false,
@@ -278,7 +278,7 @@
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-709dace2_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
+      inject("data-v-d0922312_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
 
     };
     /* scoped */
