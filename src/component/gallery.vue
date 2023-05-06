@@ -100,7 +100,7 @@
 
     methods: {
       open(index = 0) {
-        const instance = typeof blueimp.Gallery !== 'undefined' ? blueimp.Gallery : blueimp;
+        const instance = typeof window.blueimp.Gallery !== 'undefined' ? window.blueimp.Gallery : blueimp;
 
         const options = Object.assign({
           toggleControlsOnReturn: false,
