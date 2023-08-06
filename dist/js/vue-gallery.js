@@ -1,6 +1,6 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('blueimp-gallery/css/blueimp-gallery.min.css'), require('blueimp-gallery/js/blueimp-helper.js'), require('blueimp-gallery/js/blueimp-gallery.js'), require('blueimp-gallery/js/blueimp-gallery-fullscreen.js'), require('blueimp-gallery/js/blueimp-gallery-video.js'), require('blueimp-gallery/js/blueimp-gallery-youtube.js')) :
-  typeof define === 'function' && define.amd ? define(['blueimp-gallery/css/blueimp-gallery.min.css', 'blueimp-gallery/js/blueimp-helper.js', 'blueimp-gallery/js/blueimp-gallery.js', 'blueimp-gallery/js/blueimp-gallery-fullscreen.js', 'blueimp-gallery/js/blueimp-gallery-video.js', 'blueimp-gallery/js/blueimp-gallery-youtube.js'], factory) :
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('blueimp-gallery/css/blueimp-gallery.min.css'), require('blueimp-gallery/js/blueimp-helper.js'), require('blueimp-gallery/js/blueimp-gallery.js'), require('blueimp-gallery/js/blueimp-gallery-fullscreen.js'), require('blueimp-gallery/js/blueimp-gallery-video.js'), require('blueimp-gallery/js/blueimp-gallery-youtube.js'), require('blueimp-gallery/js/blueimp-gallery-vimeo.js')) :
+  typeof define === 'function' && define.amd ? define(['blueimp-gallery/css/blueimp-gallery.min.css', 'blueimp-gallery/js/blueimp-helper.js', 'blueimp-gallery/js/blueimp-gallery.js', 'blueimp-gallery/js/blueimp-gallery-fullscreen.js', 'blueimp-gallery/js/blueimp-gallery-video.js', 'blueimp-gallery/js/blueimp-gallery-youtube.js', 'blueimp-gallery/js/blueimp-gallery-vimeo.js'], factory) :
   (global = global || self, global.VueGallery = factory(null, null, global.blueimp));
 }(this, function (blueimpGallery_min_css, blueimpHelper_js, blueimp) { 'use strict';
 
@@ -278,7 +278,7 @@
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-872a4cee_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
+      inject("data-v-1318c6fe_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
 
     };
     /* scoped */
